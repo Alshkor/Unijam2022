@@ -13,7 +13,7 @@ public class InputHandler : MonoBehaviour
     #endregion
     void OnJump(InputValue value)
     {
-        int val = value.Get<int>();
+        float val = value.Get<float>();
         _playerMovement.InputJump(val);
     }
 }

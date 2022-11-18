@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
         _speed=Vector2.zero;
     }
     
-    public void InputJump(int value)
+    public void InputJump(float value)
     {
         _jump = value > 0;
     }
