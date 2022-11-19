@@ -9,8 +9,8 @@ public class KillPlayer : MonoBehaviour
 
     private int _playerLayer;
     
-
     #endregion
+    
     #region Monobehavior Callback
 
     private void Awake()
