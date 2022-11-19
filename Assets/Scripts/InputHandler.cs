@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Ui;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class InputHandler : MonoBehaviour
 {
-        #region attribute
+    #region attribute
     [SerializeField] private PauseMenu pauseMenu;   
     [SerializeField] PlayerMovement _playerMovement;
     
@@ -26,4 +27,5 @@ public class InputHandler : MonoBehaviour
     {
         pauseMenu.Pause();
     }
+    
 }

@@ -14,7 +14,8 @@ namespace Ui
 
         public void Cancel()
         {
-            currentUi.Cancel();
+            if(currentUi != null)
+                currentUi.Cancel();
         }
 
         #endregion

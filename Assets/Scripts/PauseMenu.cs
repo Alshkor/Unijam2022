@@ -10,13 +10,23 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject ui;
     [SerializeField] TextMeshProUGUI resumeText;
     [SerializeField] GameObject buttonHolder;
-    
+
     void Start(){
         ui.SetActive(false);
         resumeText.gameObject.SetActive(false);
     }
     
     public void Pause(){
+        if (buttonHolder.activeInHierarchy)
+        {
+            Resume(3);
+            return;
+        }
+
+        if (Time.timeScale == 0)
+        {
+            return;
+        }
         ui.SetActive(true);
         buttonHolder.SetActive(true);
         Time.timeScale = 0;
@@ -35,10 +45,9 @@ public class PauseMenu : MonoBehaviour
         for (int i = 0; i < totalTime; i++)
         {
             resumeText.text = (totalTime - i).ToString();
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSecondsRealtime(1);
         }
         yield return null;
-        
         //Resume Time
         resumeText.gameObject.SetActive(false);
         ui.SetActive(false);
