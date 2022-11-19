@@ -1,4 +1,5 @@
 
+using System;
 using Ui;
 
 public class GameManager : Singleton<GameManager>
@@ -7,9 +8,17 @@ public class GameManager : Singleton<GameManager>
 
     private float _playerStamina = 1.5f;
     private float _maxStamina = 3.0f;
+
     public int biome = 0;
 
+    public SectionGenerator SectionGenerator { get; private set; }
     public override bool UseDontDestroyOnLoad => true;
+
+
+    public void OnLoad()
+    {
+        SectionGenerator = FindObjectOfType<SectionGenerator>();
+    }
 
     public float PlayerStamina
     {
