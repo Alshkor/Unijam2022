@@ -96,7 +96,7 @@ public class PlayerMovement : MonoBehaviour
         {
             _speed.x = 0;
         }
-        animator.SetFloat("Speed", _speed.magnitude);
+        animator.SetFloat("Speed", _speed.x + CameraMovement.SpeedCamera);
         character.velocity = _speed;
     }
     
