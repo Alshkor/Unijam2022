@@ -1,3 +1,4 @@
+using System.Collections;
 using Ui;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -19,10 +20,26 @@ public class GameManager : Singleton<GameManager>
     public SectionGenerator SectionGenerator { get; private set; }
     public override bool UseDontDestroyOnLoad => true;
 
-
     public void OnLoad()
     {
         SectionGenerator = FindObjectOfType<SectionGenerator>();
+    }
+
+    public Color getColor()
+    {
+        switch (biome)
+        {
+            case 0:
+                return new Color(231, 129, 36);
+            case 1:
+                return Color.green;
+            case 2:
+                return Color.blue;
+            case 3:
+                return new Color(176, 34, 140);
+            default:
+                return Color.white;
+        }
     }
 
     public float PlayerStamina

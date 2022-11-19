@@ -23,13 +23,34 @@ public class Item : MonoBehaviour
 
     #region Attributes
 
-    [SerializeField] private ItemType type = ItemType.Orange;
+    private ItemType type;
     private int value = 1;
     private bool taken = false;
 
     #endregion
 
     #region Mono Behaviour handlers
+
+    private void Start()
+    {
+        switch (GameManager.Instance.biome)
+        {
+            case 0:
+                type = ItemType.Orange;
+                break;
+            case 1:
+                type = ItemType.Vert;
+                break;
+            case 2:
+                type = ItemType.Bleu;
+                break;
+            case 3:
+                type = ItemType.Violet;
+                break;
+            default:
+                break;
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
