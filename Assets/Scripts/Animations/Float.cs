@@ -58,13 +58,13 @@ public class Float : MonoBehaviour
         {
             target_pos_add = pos_initial + Vector3.up * addHeight;
             target_pos_sous = pos_initial - Vector3.up * sousHeight;
-            while (isFloating && transform.localPosition.y < target_pos_add.y - 0.3)
+            while (isFloating && transform.localPosition.y <= target_pos_add.y - 0.01)
             {
                 transform.localPosition = Vector3.Lerp(transform.localPosition, target_pos_add, Time.deltaTime * speed);
                 yield return null;
             }
             
-            while (isFloating && transform.localPosition.y > target_pos_sous.y + 0.3)
+            while (isFloating && transform.localPosition.y >= target_pos_sous.y + 0.01)
             {
                 transform.localPosition = Vector3.Lerp(transform.localPosition, target_pos_sous, Time.deltaTime * speed);
                 yield return null;
