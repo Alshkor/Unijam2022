@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
@@ -17,6 +14,7 @@ public class CameraMovement : MonoBehaviour
     private void Start()
     {
         GameManager.Instance.OnLoad();
+        GameManager.Instance.OnNewLevel += () => speedCamera += 0.5f;
     }
 
     private void FixedUpdate()

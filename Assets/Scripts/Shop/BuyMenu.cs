@@ -9,15 +9,24 @@ namespace Shop
     public class BuyMenu : CancelableUi
     {
         #region Attributes
+        [SerializeField] private Image image;
 
-        [SerializeField] private Button staminaButton;
-        [SerializeField] private int priceStamina;
-        [SerializeField] private TextMeshProUGUI priceStaminaText;
+        [SerializeField] private Button currentStaminaButton;
+        [SerializeField] private Button maxStaminaButton;
+        [SerializeField] private int priceCurrentStamina;
+        [SerializeField] private int priceMaxStamina;
+        [SerializeField] private TextMeshProUGUI priceCurrentStaminaText;
+        [SerializeField] private TextMeshProUGUI priceMaxStaminaText;
+        [SerializeField] private float boostStamina;
+        [SerializeField] private float boostMaxStamina;
+        
 
         #endregion
         
         private void OnEnable()
         {
+            image.color = GameManager.Instance.getColor();
+            
             EventSystem.current.SetSelectedGameObject(null);
             EventSystem.current.SetSelectedGameObject(cancelButton.gameObject);
         }
@@ -27,23 +36,38 @@ namespace Shop
         public override void SetButtonClickEvent()
         {
             base.SetButtonClickEvent();
-            staminaButton.onClick.AddListener(BuyStamina);
-            priceStaminaText.text = priceStamina + " CAD";
+            currentStaminaButton.onClick.AddListener(BuyCurrentStamina);
+            priceCurrentStaminaText.text = priceCurrentStamina + " CAD";
+            currentStaminaButton.onClick.AddListener(BuyMaxStamina);
+            priceMaxStaminaText.text = priceMaxStamina + " CAD";
         }
 
         #endregion
 
         #region Private methods
 
-        private void BuyStamina()
+        private void BuyCurrentStamina()
         {
             var manager = ItemManager.Instance;
-            if (manager.Money < priceStamina)
+            if (manager.Money < priceCurrentStamina)
+                return;
+            if (GameManager.Instance.MaxStamina < boostStamina + GameManager.Instance.PlayerStamina)
                 return;
 
-            manager.Money -= priceStamina;
+            manager.Money -= priceCurrentStamina;
 
-            GameManager.Instance.PlayerStamina += 10.0f;
+            GameManager.Instance.PlayerStamina += boostStamina;
+        }
+        
+        private void BuyMaxStamina()
+        {
+            var manager = ItemManager.Instance;
+            if (manager.Money < priceMaxStamina)
+                return;
+
+            manager.Money -= priceMaxStamina;
+
+            GameManager.Instance.MaxStamina += boostMaxStamina;
         }
 
         #endregion
