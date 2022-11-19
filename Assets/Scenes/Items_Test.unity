@@ -130,6 +130,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 755465211800553121, guid: 207eea569c41d2c408a0676b6a2d3fe6, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 755465211800553121, guid: 207eea569c41d2c408a0676b6a2d3fe6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6749301807691179836, guid: 207eea569c41d2c408a0676b6a2d3fe6, type: 3}
       propertyPath: m_Name
       value: ItemManagerHandler
@@ -178,16 +186,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6749301808949300515, guid: 207eea569c41d2c408a0676b6a2d3fe6, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 6749301808949300515, guid: 207eea569c41d2c408a0676b6a2d3fe6, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -40
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 207eea569c41d2c408a0676b6a2d3fe6, type: 3}
+--- !u!1 &417653777 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4525157353742079310, guid: 207eea569c41d2c408a0676b6a2d3fe6, type: 3}
+  m_PrefabInstance: {fileID: 417653776}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &417653778 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3274459191741675212, guid: 207eea569c41d2c408a0676b6a2d3fe6, type: 3}
+  m_PrefabInstance: {fileID: 417653776}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417653777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &417653779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417653777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4645d210dcbb23e45a0d83ff1ec53df3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  staminaBar: {fileID: 417653778}
 --- !u!1 &852233993
 GameObject:
   m_ObjectHideFlags: 0
@@ -583,11 +612,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddaa287276c40e14f820f1444174339b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groundCheckLeft: {fileID: 0}
+  groundCheckRight: {fileID: 0}
   character: {fileID: 1498198867}
-  jump_speed: 1
-  ground_check_left: {fileID: 1940469860}
-  ground_check_right: {fileID: 852233994}
-  jump_force: {x: 0, y: 0}
+  sprintSpeed: 0.5
+  canSprint: 1
+  jumpSpeed: 0
+  jumpForce: {x: 0, y: 0}
 --- !u!50 &1498198867
 Rigidbody2D:
   serializedVersion: 4
