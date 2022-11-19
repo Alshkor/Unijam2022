@@ -82,11 +82,9 @@ public class Item : MonoBehaviour
 
     IEnumerator Disappear(float time = 0)
     {
-        yield return (time == 0 ? null : time);
+        yield return (time == 0 ? null : new WaitForSeconds(time));
         Destroy(gameObject);
     }
 
     #endregion
-    
-    
 }
