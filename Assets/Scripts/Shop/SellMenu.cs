@@ -1,5 +1,6 @@
 using UI;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace Shop
@@ -16,6 +17,12 @@ namespace Shop
         [SerializeField] private int[] prices; //prix du plus bas au plus haut par ex : [10, 20, 30, 40]
 
         #endregion
+        
+        private void OnEnable()
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(cancelButton.gameObject);
+        }
 
 
         #region Override Methods
@@ -23,10 +30,10 @@ namespace Shop
         public override void SetButtonClickEvent()
         {
             cancelButton.onClick.AddListener(Cancel);
-            button1.onClick.AddListener(() => Sell(Item.ItemType.Bois));
-            button2.onClick.AddListener(() => Sell(Item.ItemType.Or));
-            button3.onClick.AddListener(() => Sell(Item.ItemType.Coquillage));
-            //button4.onClick.AddListener(() => Sell(3));
+            button1.onClick.AddListener(() => Sell(Item.ItemType.Violet));
+            button2.onClick.AddListener(() => Sell(Item.ItemType.Orange));
+            button3.onClick.AddListener(() => Sell(Item.ItemType.Bleu));
+            button4.onClick.AddListener(() => Sell(Item.ItemType.Vert));
 
         }
 
@@ -43,24 +50,31 @@ namespace Shop
 
             switch (itemType)
             {
-                case Item.ItemType.Bois:
-                    if (manager.GetItemValue(Item.ItemType.Bois) <= 0)
+                case Item.ItemType.Violet:
+                    if (manager.GetItemValue(Item.ItemType.Violet) <= 0)
                         return;
                     money = prices[1 + biome % 4];
-                    manager.PayItem(Item.ItemType.Bois, 1);
+                    manager.PayItem(Item.ItemType.Violet, 1);
                     break;
-                case Item.ItemType.Or:
-                    if (manager.GetItemValue(Item.ItemType.Or) <= 0)
+                case Item.ItemType.Orange:
+                    if (manager.GetItemValue(Item.ItemType.Orange) <= 0)
                         return;
                     money = prices[1 +(1 + biome) % 4];
-                    manager.PayItem(Item.ItemType.Or, 1);
+                    manager.PayItem(Item.ItemType.Orange, 1);
                     break;
-                case Item.ItemType.Coquillage:
-                    if (manager.GetItemValue(Item.ItemType.Coquillage) <= 0)
+                case Item.ItemType.Bleu:
+                    if (manager.GetItemValue(Item.ItemType.Bleu) <= 0)
                         return;
                     money = prices[1 + (2 + biome) % 4];
-                    manager.PayItem(Item.ItemType.Coquillage, 1);
+                    manager.PayItem(Item.ItemType.Bleu, 1);
                     break;
+                case Item.ItemType.Vert:
+                    if (manager.GetItemValue(Item.ItemType.Vert) <= 0)
+                        return;
+                    money = prices[1 + (3 + biome) % 4];
+                    manager.PayItem(Item.ItemType.Vert, 1);
+                    break;
+
             }
 
             manager.Money += money;

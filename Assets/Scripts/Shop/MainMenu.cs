@@ -1,7 +1,8 @@
+using System;
 using Ui;
 using UI;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace Shop
@@ -12,11 +13,16 @@ namespace Shop
 
         [SerializeField] private GameObject sellMenu;
         [SerializeField] private GameObject buyMenu;
-        [SerializeField] private string mainScene;
         [SerializeField] private Button sellButton;
         [SerializeField] private Button buyButton;
 
         #endregion
+
+        private void OnEnable()
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(sellButton.gameObject);
+        }
 
         #region Override methods
 
@@ -27,7 +33,7 @@ namespace Shop
         
         public override void SetButtonClickEvent()
         {
-            cancelButton.onClick.AddListener(() => SceneManager.LoadScene(mainScene));
+            cancelButton.onClick.AddListener(GameManager.Instance.LoadNewLevel);
             sellButton.onClick.AddListener(() =>
             {
                 sellMenu.SetActive(true);

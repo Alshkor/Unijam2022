@@ -1,6 +1,6 @@
-
-using System;
 using Ui;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -9,7 +9,12 @@ public class GameManager : Singleton<GameManager>
     private float _playerStamina = 1.5f;
     private float _maxStamina = 3.0f;
 
-    public int biome = 0;
+    [SerializeField] private string mainScene;
+    [SerializeField] private string mainMenu;
+    [SerializeField] private string shopMenu;
+    [SerializeField] private string loseMenu;
+
+    public int biome = 0; //Biomes 0, 1, 2, 3
 
     public SectionGenerator SectionGenerator { get; private set; }
     public override bool UseDontDestroyOnLoad => true;
@@ -51,7 +56,47 @@ public class GameManager : Singleton<GameManager>
 
     #endregion
 
+    #region Public Methods
 
+    /// <summary>
+    /// Methode appelée pour charger un nouveau niveau
+    /// </summary>
+    public void LoadNewLevel()
+    {
+        biome = (biome + 1) % 4; // On change de biome
+        SceneManager.LoadScene(mainScene);
+    }
+
+
+    /// <summary>
+    /// Methode appelée pour retourner au menu principal, elle va detruire notemment les Don't destroy on load
+    /// </summary>
+    public void ReturnToMainMenu()
+    {
+        //todo ajouter d'autres chose a detruire si jamsi il le faut
+        Destroy(ItemManager.Instance.gameObject);
+        Destroy(gameObject);
+        SceneManager.LoadScene(mainMenu);
+    }
+
+    /// <summary>
+    /// Methode appelée pour charger la scene du shop
+    /// </summary>
+    public void GoToShop()
+    {
+        SceneManager.LoadScene(shopMenu);
+    }
+
+    /// <summary>
+    /// Methode appel2e pour charger l'écran de défaite
+    /// </summary>
+    public void Lose()
+    {
+        SceneManager.LoadScene(loseMenu);
+    }
+    
+
+    #endregion
 
 
 }

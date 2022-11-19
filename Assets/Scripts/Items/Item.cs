@@ -13,16 +13,17 @@ public class Item : MonoBehaviour
     
     public enum ItemType
     {
-        Coquillage,
-        Bois,
-        Or
+        Bleu,
+        Violet,
+        Orange,
+        Vert
     };
     
     #endregion
 
     #region Attributes
 
-    [SerializeField] private ItemType type = ItemType.Or;
+    [SerializeField] private ItemType type = ItemType.Orange;
     private int value = 1;
     private bool taken = false;
 
