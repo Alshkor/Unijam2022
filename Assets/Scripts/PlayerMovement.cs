@@ -87,10 +87,10 @@ public class PlayerMovement : MonoBehaviour
             _speed.y = character.velocity.y;
         }
 
-        if (_sprintInput && GameManager.Instance.playerStamina>0)
+        if (_sprintInput && GameManager.Instance.PlayerStamina>0)
         {
             _speed.x = sprintSpeed;
-            GameManager.Instance.playerStamina -= Time.deltaTime;
+            GameManager.Instance.PlayerStamina -= Time.deltaTime;
         }
         else
         {
