@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Ui;
 using UnityEngine;
@@ -15,7 +16,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private string shopMenu;
     [SerializeField] private string loseMenu;
     
-    [SerializeField] private RuleTile ruleTile;
+    //private RuleTile _ruleTile;
     [SerializeField] private GameObject orange;
     [SerializeField] private GameObject vert;
     [SerializeField] private GameObject bleu;
@@ -86,22 +87,23 @@ public class GameManager : Singleton<GameManager>
     /// </summary>
     public void LoadNewLevel()
     {
+        //_ruleTile = Resources.Load<RuleTile>("ItemJaune");
         biome = (biome + 1) % 4; // On change de biome
-        switch (biome)
+        /*switch (biome)
         {
             case 0:
-                ruleTile.m_DefaultGameObject = orange;
+                _ruleTile.m_DefaultGameObject = orange;
                 break;
             case 1:
-                ruleTile.m_DefaultGameObject = vert;
+                _ruleTile.m_DefaultGameObject = vert;
                 break;
             case 2:
-                ruleTile.m_DefaultGameObject = bleu;
+                _ruleTile.m_DefaultGameObject = bleu;
                 break;
             case 3:
-                ruleTile.m_DefaultGameObject = violet;
+                _ruleTile.m_DefaultGameObject = violet;
                 break;
-        }
+        }*/
         OnNewLevel?.Invoke();
         SceneManager.LoadScene(mainScene);
     }
@@ -137,8 +139,26 @@ public class GameManager : Singleton<GameManager>
     
     public delegate void OnNewLevelEventHandler();
     public event OnNewLevelEventHandler OnNewLevel;
-    
-    
+
+    private void Start()
+    {
+        /*_ruleTile = Resources.Load<RuleTile>("ItemJaune");
+        switch (biome)
+        {
+            case 0:
+                _ruleTile.m_DefaultGameObject = orange;
+                break;
+            case 1:
+                _ruleTile.m_DefaultGameObject = vert;
+                break;
+            case 2:
+                _ruleTile.m_DefaultGameObject = bleu;
+                break;
+            case 3:
+                _ruleTile.m_DefaultGameObject = violet;
+                break;
+        }*/
+    }
 
     #endregion
 
