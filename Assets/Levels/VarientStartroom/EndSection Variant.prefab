@@ -144,6 +144,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2620921315718566632, guid: d61c2d0c778285743a1d32b37957baed, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4420449986581162958, guid: d61c2d0c778285743a1d32b37957baed, type: 3}
       propertyPath: m_Size.y
       value: 25
@@ -311,6 +315,10 @@ PrefabInstance:
     - target: {fileID: 4420449986581162958, guid: d61c2d0c778285743a1d32b37957baed, type: 3}
       propertyPath: m_TileObjectToInstantiateArray.Array.data[0].m_RefCount
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4420449986926817330, guid: d61c2d0c778285743a1d32b37957baed, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4420449986926817335, guid: d61c2d0c778285743a1d32b37957baed, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
