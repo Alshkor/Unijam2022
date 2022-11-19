@@ -46,9 +46,10 @@ GameObject:
   - component: {fileID: 1833769961150032363}
   - component: {fileID: 9091230053582831050}
   - component: {fileID: 4263746300397177953}
-  m_Layer: 0
+  - component: {fileID: 1605616994}
+  m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -146,11 +147,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddaa287276c40e14f820f1444174339b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groundCheckLeft: {fileID: 6070917713979911593}
+  groundCheckRight: {fileID: 6070917713281891104}
   character: {fileID: 6070917713673026936}
-  jump_speed: 10
-  ground_check_left: {fileID: 6070917713979911593}
-  ground_check_right: {fileID: 6070917713281891104}
-  jump_force: {x: 0, y: 10}
+  sprintSpeed: 1
+  canSprint: 1
+  jumpSpeed: 10
+  jumpForce: {x: 0, y: 10}
 --- !u!114 &9091230053582831050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,6 +197,18 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1605616994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6070917713673026935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a2f901220f76e64abb39e3764fad056, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6070917713979911592
 GameObject:
   m_ObjectHideFlags: 0

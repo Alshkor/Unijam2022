@@ -3,37 +3,52 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
-    public Rigidbody2D character;
-    public float jump_speed;
-    public Transform ground_check_left;
-    public Transform ground_check_right;
-    public Vector2 jump_force;
+    #region SerializedField
+    [SerializeField] private Transform groundCheckLeft;
+    [SerializeField] private Transform groundCheckRight;
+    [SerializeField] private Rigidbody2D character;
 
+    #endregion
 
+    public float sprintSpeed = 0.5f;
+    public bool canSprint = true;
+    public float jumpSpeed;
+
+    public Vector2 jumpForce;
+
+    #region Priavate Attribute
+
+    private bool _sprintInput;
     private Vector2 _speed;
-    private bool _jump;
-    private Vector2 _add_jump_force;
-    private bool _is_grounded_;
-    private bool _was_on_air;
+    private bool _jumpInput;
+    private Vector2 _addJumpForce;
+    private bool _isGrounded;
+    private bool _wasOnAir;
+
+    #endregion
+
     
     void Awake()
     {
         Application.targetFrameRate = 70;
-        _is_grounded_ = true;
-        _was_on_air = false;
-        transform.parent = null;
+        _isGrounded = true;
+        _wasOnAir = false;
         _speed=Vector2.zero;
     }
     
     public void InputJump(float value)
     {
-        _jump = value > 0;
+        _jumpInput = value > 0;
+    }
+    public void InputSprint(float value)
+    {
+        _sprintInput = value > 0;
     }
     
     
     void FixedUpdate()
     {
-        _is_grounded_ = Physics2D.Linecast(ground_check_left.position, ground_check_right.position,LayerMask.GetMask("Default"));
+        _isGrounded = Physics2D.Linecast(groundCheckLeft.position, groundCheckRight.position,LayerMask.GetMask("Default"));
         /*if (!_pauseUI.activeSelf)
             Move_player();*/
         Move_player();
@@ -41,35 +56,41 @@ public class PlayerMovement : MonoBehaviour
 
     void Move_player()
     {
-        if (!_is_grounded_ && !_was_on_air)
+        if (!_isGrounded && !_wasOnAir)
         {
-            _was_on_air = true;
+            _wasOnAir = true;
         }
 
-        if (_is_grounded_ && _was_on_air)
+        if (_isGrounded && _wasOnAir)
         {
-            _was_on_air = false;
+            _wasOnAir = false;
 
 
         }
 
-        if (_jump)
+        if (_jumpInput)
         {
-            if (_is_grounded_ && _speed.y<1)
+            if (_isGrounded && _speed.y<1)
             {
-                _speed.y = jump_speed;
+                _speed.y = jumpSpeed;
             }
             else
             {
                 _speed.y = character.velocity.y;
-                character.AddForce(jump_force);
+                character.AddForce(jumpForce);
 
             }
         }
         else
         {
-            _add_jump_force = Vector2.zero;
+            _addJumpForce = Vector2.zero;
             _speed.y = character.velocity.y;
+        }
+
+        if (_sprintInput && GameManager.Instance.playerStamina>0)
+        {
+            _speed.x = sprintSpeed;
+            GameManager.Instance.playerStamina -= Time.deltaTime;
         }
         character.velocity = _speed;
     }
