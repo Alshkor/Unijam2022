@@ -92,6 +92,10 @@ public class PlayerMovement : MonoBehaviour
             _speed.x = sprintSpeed;
             GameManager.Instance.playerStamina -= Time.deltaTime;
         }
+        else
+        {
+            _speed.x = 0;
+        }
         character.velocity = _speed;
     }
     

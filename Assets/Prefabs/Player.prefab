@@ -150,7 +150,7 @@ MonoBehaviour:
   groundCheckLeft: {fileID: 6070917713979911593}
   groundCheckRight: {fileID: 6070917713281891104}
   character: {fileID: 6070917713673026936}
-  sprintSpeed: 1
+  sprintSpeed: 2
   canSprint: 1
   jumpSpeed: 10
   jumpForce: {x: 0, y: 10}
