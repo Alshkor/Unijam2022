@@ -25,7 +25,10 @@ public class ItemManager : Singleton<ItemManager>
     /// </summary>
     private List<Item.ItemType> _itemsType;
 
+    //Getters of types
     public List<Item.ItemType> itemsTypes => _itemsType;
+    
+    public override bool UseDontDestroyOnLoad => true;
 
     #endregion
 
@@ -33,6 +36,7 @@ public class ItemManager : Singleton<ItemManager>
 
     protected override void OnAwake()
     {
+        //Setup types
         _items = new Dictionary<Item.ItemType, int>();
         _itemsType = new List<Item.ItemType>();
         foreach (Item.ItemType type in Enum.GetValues(typeof(Item.ItemType)))
