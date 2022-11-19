@@ -1,3 +1,4 @@
+using TMPro;
 using UI;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,6 +10,8 @@ namespace Shop
         #region Attributes
 
         [SerializeField] private Button staminaButton;
+        [SerializeField] private int priceStamina;
+        [SerializeField] private TextMeshProUGUI priceStaminaText;
 
         #endregion
 
@@ -18,6 +21,7 @@ namespace Shop
         {
             base.SetButtonClickEvent();
             staminaButton.onClick.AddListener(BuyStamina);
+            priceStaminaText.text = priceStamina + " CAD";
         }
 
         #endregion
@@ -26,7 +30,13 @@ namespace Shop
 
         private void BuyStamina()
         {
-            
+            var manager = ItemManager.Instance;
+            if (manager.Money < priceStamina)
+                return;
+
+            manager.Money -= priceStamina;
+
+            GameManager.Instance.PlayerStamina += 10.0f;
         }
 
         #endregion

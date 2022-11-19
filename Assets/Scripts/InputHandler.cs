@@ -16,4 +16,9 @@ public class InputHandler : MonoBehaviour
         float val = value.Get<float>();
         _playerMovement.InputJump(val);
     }
+    void OnSprint(InputValue value)
+    {
+        float val = value.Get<float>();
+        _playerMovement.InputSprint(val);
+    }
 }
