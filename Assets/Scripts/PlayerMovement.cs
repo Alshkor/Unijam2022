@@ -49,12 +49,10 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         _isGrounded = Physics2D.Linecast(groundCheckLeft.position, groundCheckRight.position,LayerMask.GetMask("Default"));
-        /*if (!_pauseUI.activeSelf)
-            Move_player();*/
-        Move_player();
+        MovePlayer();
     }
 
-    void Move_player()
+    void MovePlayer()
     {
         if (!_isGrounded && !_wasOnAir)
         {
