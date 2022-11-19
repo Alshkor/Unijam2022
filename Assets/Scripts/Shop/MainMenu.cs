@@ -16,6 +16,7 @@ namespace Shop
         [SerializeField] private GameObject buyMenu;
         [SerializeField] private Button sellButton;
         [SerializeField] private Button buyButton;
+        
 
         #endregion
 
@@ -35,7 +36,10 @@ namespace Shop
         
         public override void SetButtonClickEvent()
         {
-            cancelButton.onClick.AddListener(GameManager.Instance.LoadNewLevel);
+            cancelButton.onClick.AddListener(() =>
+            {
+                GameManager.Instance.LoadNewLevel();
+            });
             sellButton.onClick.AddListener(() =>
             {
                 sellMenu.SetActive(true);

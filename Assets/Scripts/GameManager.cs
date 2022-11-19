@@ -14,6 +14,12 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private string mainMenu;
     [SerializeField] private string shopMenu;
     [SerializeField] private string loseMenu;
+    
+    [SerializeField] private RuleTile ruleTile;
+    [SerializeField] private GameObject orange;
+    [SerializeField] private GameObject vert;
+    [SerializeField] private GameObject bleu;
+    [SerializeField] private GameObject violet;
 
     public int biome = 0; //Biomes 0, 1, 2, 3
 
@@ -81,6 +87,21 @@ public class GameManager : Singleton<GameManager>
     public void LoadNewLevel()
     {
         biome = (biome + 1) % 4; // On change de biome
+        switch (biome)
+        {
+            case 0:
+                ruleTile.m_DefaultGameObject = orange;
+                break;
+            case 1:
+                ruleTile.m_DefaultGameObject = vert;
+                break;
+            case 2:
+                ruleTile.m_DefaultGameObject = bleu;
+                break;
+            case 3:
+                ruleTile.m_DefaultGameObject = violet;
+                break;
+        }
         OnNewLevel?.Invoke();
         SceneManager.LoadScene(mainScene);
     }
