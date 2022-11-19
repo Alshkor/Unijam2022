@@ -29,6 +29,7 @@ public class ItemManager : Singleton<ItemManager>
             if (value < 0)
                 return;
             _money = value;
+            uiManager.UpdateScore(_money);
         }
     }
 
