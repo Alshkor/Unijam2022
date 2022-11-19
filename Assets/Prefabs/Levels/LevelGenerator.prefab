@@ -64,7 +64,7 @@ MonoBehaviour:
   - {fileID: 9115859776884769162, guid: 2d19412210e650c4cbedaf39047e9874, type: 3}
   sectionsShop: {fileID: 6837801299555151361, guid: 0cf93a3d2e0ff6e4e88fba915dfbf7a0, type: 3}
   lastSection: {fileID: 790920704170898345}
-  sectionsBeforeShop: 10
+  sectionsBeforeShop: 1
   offsetSection: 130
 --- !u!1001 &4008623576167801778
 PrefabInstance:
@@ -73,6 +73,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2858249002924168063}
     m_Modifications:
+    - target: {fileID: 2671488354078770689, guid: d61c2d0c778285743a1d32b37957baed, type: 3}
+      propertyPath: bleu
+      value: 
+      objectReference: {fileID: 6910152057977778070, guid: 901f80ce134aa4b449769561f73fdfdf, type: 3}
+    - target: {fileID: 2671488354078770689, guid: d61c2d0c778285743a1d32b37957baed, type: 3}
+      propertyPath: vert
+      value: 
+      objectReference: {fileID: 6910152057977778070, guid: 0e48f3fb34aefd1418ddd3e707da03b1, type: 3}
+    - target: {fileID: 2671488354078770689, guid: d61c2d0c778285743a1d32b37957baed, type: 3}
+      propertyPath: orange
+      value: 
+      objectReference: {fileID: 6910152057977778070, guid: ce9a41d30edea5841bfb4b74c62ccf24, type: 3}
+    - target: {fileID: 2671488354078770689, guid: d61c2d0c778285743a1d32b37957baed, type: 3}
+      propertyPath: violet
+      value: 
+      objectReference: {fileID: 6910152057977778070, guid: 2e7f1313004052b48a1f78797df4d02a, type: 3}
+    - target: {fileID: 2671488354078770689, guid: d61c2d0c778285743a1d32b37957baed, type: 3}
+      propertyPath: ruleTile
+      value: 
+      objectReference: {fileID: 11400000, guid: e1e9d0b50f231844f8a0f7d67dbecedb, type: 2}
     - target: {fileID: 4420449987262369818, guid: d61c2d0c778285743a1d32b37957baed, type: 3}
       propertyPath: m_RootOrder
       value: 0
