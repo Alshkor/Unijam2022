@@ -4250,7 +4250,7 @@ MonoBehaviour:
   button2: {fileID: 1953229221}
   button3: {fileID: 852661084}
   button4: {fileID: 1641172998}
-  prices: 
+  prices: 0a000000140000001e00000028000000
 --- !u!1 &1880434306
 GameObject:
   m_ObjectHideFlags: 0

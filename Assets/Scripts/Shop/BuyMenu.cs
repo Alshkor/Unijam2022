@@ -35,8 +35,8 @@ namespace Shop
                 return;
 
             manager.Money -= priceStamina;
-            
-            //todo make stamina
+
+            GameManager.Instance.PlayerStamina += 10.0f;
         }
 
         #endregion
