@@ -25,7 +25,7 @@ namespace Shop
         
         public override void SetButtonClickEvent()
         {
-            cancelButton.onClick.AddListener(() => GameManager.Instance.LoadNewLevel());
+            cancelButton.onClick.AddListener(GameManager.Instance.LoadNewLevel);
             sellButton.onClick.AddListener(() =>
             {
                 sellMenu.SetActive(true);

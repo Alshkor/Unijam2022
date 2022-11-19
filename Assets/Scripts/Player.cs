@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     
 
     #endregion
+    
     #region Monobehavior Callback
 
     // Start is called before the first frame update
@@ -27,8 +28,7 @@ public class Player : MonoBehaviour
 
     public void KillPlayer()
     {
-        Scene scene = SceneManager.GetActiveScene(); 
-        SceneManager.LoadScene(scene.name);
+        GameManager.Instance.Lose();
     }
     
 
