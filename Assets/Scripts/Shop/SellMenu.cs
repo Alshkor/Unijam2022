@@ -1,5 +1,6 @@
 using UI;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace Shop
@@ -16,6 +17,12 @@ namespace Shop
         [SerializeField] private int[] prices; //prix du plus bas au plus haut par ex : [10, 20, 30, 40]
 
         #endregion
+        
+        private void OnEnable()
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(cancelButton.gameObject);
+        }
 
 
         #region Override Methods

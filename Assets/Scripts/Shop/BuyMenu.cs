@@ -1,6 +1,7 @@
 using TMPro;
 using UI;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace Shop
@@ -14,6 +15,12 @@ namespace Shop
         [SerializeField] private TextMeshProUGUI priceStaminaText;
 
         #endregion
+        
+        private void OnEnable()
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(cancelButton.gameObject);
+        }
 
         #region Override methods
 

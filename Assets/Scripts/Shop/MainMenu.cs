@@ -1,6 +1,8 @@
+using System;
 using Ui;
 using UI;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace Shop
@@ -15,6 +17,12 @@ namespace Shop
         [SerializeField] private Button buyButton;
 
         #endregion
+
+        private void OnEnable()
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(sellButton.gameObject);
+        }
 
         #region Override methods
 
