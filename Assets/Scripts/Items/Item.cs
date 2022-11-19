@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 /// <summary>
@@ -28,11 +29,12 @@ public class Item : MonoBehaviour
 
     #region Mono Behaviour handlers
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.transform.CompareTag("Player"))
         {
             ItemManager.Instance.GainItem(type, value);
+            StartCoroutine(Disappear());
         }
         else
         {
@@ -50,7 +52,11 @@ public class Item : MonoBehaviour
 
     #region Private Methods
 
-    
+    IEnumerator Disappear(float time = 0)
+    {
+        yield return (time == 0 ? null : time);
+        Destroy(gameObject);
+    }
 
     #endregion
     
