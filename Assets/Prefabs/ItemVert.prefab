@@ -226,7 +226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 250
-  rotationAxis: {x: 5, y: 10, z: 3}
+  rotationAxis: {x: 1, y: 10, z: 1}
   rotate: 0
 --- !u!114 &1458011719
 MonoBehaviour:
@@ -354,7 +354,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2687d460f0cf58347af3e18309ce94cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 2
 --- !u!61 &6910152057977778089
 BoxCollider2D:
   m_ObjectHideFlags: 0
