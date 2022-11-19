@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpSpeed;
 
     public Vector2 jumpForce;
+    [SerializeField] private Animator animator;
 
     #region Priavate Attribute
 
@@ -71,12 +72,13 @@ public class PlayerMovement : MonoBehaviour
             if (_isGrounded && _speed.y<1)
             {
                 _speed.y = jumpSpeed;
+                
             }
             else
             {
                 _speed.y = character.velocity.y;
                 character.AddForce(jumpForce);
-
+                animator.SetTrigger("Jump");
             }
         }
         else
@@ -94,6 +96,7 @@ public class PlayerMovement : MonoBehaviour
         {
             _speed.x = 0;
         }
+        animator.SetFloat("Speed", _speed.magnitude);
         character.velocity = _speed;
     }
     
