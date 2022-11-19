@@ -320,7 +320,7 @@ Transform:
   m_GameObject: {fileID: 6682908901566096141}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -37.7, y: -0.7207, z: 0}
-  m_LocalScale: {x: 1, y: 50, z: 1}
+  m_LocalScale: {x: 1, y: 87.18, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6682908902529863780}
@@ -465,7 +465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 385fbd7e945781945be84ac02c1087ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedCamera: 7
+  speedCamera: 8
 --- !u!1 &6682908903137660164
 GameObject:
   m_ObjectHideFlags: 0

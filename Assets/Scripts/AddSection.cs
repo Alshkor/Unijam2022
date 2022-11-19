@@ -23,6 +23,7 @@ public class AddSection : MonoBehaviour
     {
         if (col.gameObject.layer == layerSection)
         {
+            
             GameManager.Instance.SectionGenerator.NewSection();
         }
     

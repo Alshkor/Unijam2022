@@ -62,7 +62,7 @@ MonoBehaviour:
   - {fileID: 7912526915553232790, guid: 2c1bd32012e4cf5489769decb59fbd1a, type: 3}
   - {fileID: 2230893073350872227, guid: faf74dc420c80f74d8d0eed591595fbe, type: 3}
   - {fileID: 9115859776884769162, guid: 2d19412210e650c4cbedaf39047e9874, type: 3}
-  sectionsShop: {fileID: 4420449987262369819, guid: d61c2d0c778285743a1d32b37957baed, type: 3}
+  sectionsShop: {fileID: 6837801299555151361, guid: 0cf93a3d2e0ff6e4e88fba915dfbf7a0, type: 3}
   lastSection: {fileID: 790920704170898345}
   sectionsBeforeShop: 10
   offsetSection: 130
@@ -119,7 +119,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4420449987262369819, guid: d61c2d0c778285743a1d32b37957baed, type: 3}
       propertyPath: m_Name
-      value: Section4Orange
+      value: Start
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d61c2d0c778285743a1d32b37957baed, type: 3}
