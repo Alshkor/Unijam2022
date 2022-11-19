@@ -186,6 +186,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6749301808016725881, guid: 207eea569c41d2c408a0676b6a2d3fe6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 207eea569c41d2c408a0676b6a2d3fe6, type: 3}
 --- !u!1001 &151079807
@@ -424,60 +428,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1741423801
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1741423803}
-  - component: {fileID: 1741423802}
-  m_Layer: 0
-  m_Name: lol
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1741423802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1741423801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e28a245c3ba82b64dabe6fe43ee135bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainScene: GenerationAuto
-  mainMenu: MainMenu
-  shopMenu: Shop
-  loseMenu: LoseMenu
-  ruleTile: {fileID: 11400000, guid: e1e9d0b50f231844f8a0f7d67dbecedb, type: 2}
-  orange: {fileID: 6910152057977778070, guid: ce9a41d30edea5841bfb4b74c62ccf24, type: 3}
-  vert: {fileID: 6910152057977778070, guid: 0e48f3fb34aefd1418ddd3e707da03b1, type: 3}
-  bleu: {fileID: 6910152057977778070, guid: 901f80ce134aa4b449769561f73fdfdf, type: 3}
-  violet: {fileID: 6910152057977778070, guid: 2e7f1313004052b48a1f78797df4d02a, type: 3}
-  biome: 0
---- !u!4 &1741423803
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1741423801}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.988702, y: -4.079196, z: 3.6918585}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2073129026
@@ -565,6 +515,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 790920705657014396, guid: 7473299d9638d434a8eeea547639a0ff, type: 3}
+      propertyPath: m_TileObjectToInstantiateArray.Array.data[0].m_Data
+      value: 
+      objectReference: {fileID: 6910152057977778070, guid: ce9a41d30edea5841bfb4b74c62ccf24, type: 3}
     - target: {fileID: 1347268326359410099, guid: 7473299d9638d434a8eeea547639a0ff, type: 3}
       propertyPath: bleu
       value: 

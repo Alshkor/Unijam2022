@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Ui;
 using UnityEngine;
@@ -137,8 +138,25 @@ public class GameManager : Singleton<GameManager>
     
     public delegate void OnNewLevelEventHandler();
     public event OnNewLevelEventHandler OnNewLevel;
-    
-    
+
+    private void Start()
+    {
+        switch (biome)
+        {
+            case 0:
+                ruleTile.m_DefaultGameObject = orange;
+                break;
+            case 1:
+                ruleTile.m_DefaultGameObject = vert;
+                break;
+            case 2:
+                ruleTile.m_DefaultGameObject = bleu;
+                break;
+            case 3:
+                ruleTile.m_DefaultGameObject = violet;
+                break;
+        }
+    }
 
     #endregion
 
