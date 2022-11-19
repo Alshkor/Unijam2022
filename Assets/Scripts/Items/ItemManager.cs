@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 /// <summary>
@@ -9,20 +11,39 @@ public class ItemManager : Singleton<ItemManager>
 {
     #region Attributes
 
+    [SerializeField] private ItemUIManager uiManager;
+    
     /// <summary>
     /// Les objets obtenus par le joueur
     /// <param name="Item.ItemType">Le type de l'objet</param>
     /// <param name="int">La quantité possédée</param>
     /// </summary>
-    private Dictionary<Item.ItemType, int> items;
+    private Dictionary<Item.ItemType, int> _items;
+
+    /// <summary>
+    /// List of our types
+    /// </summary>
+    private List<Item.ItemType> _itemsType;
+
+    //Getters of types
+    public List<Item.ItemType> itemsTypes => _itemsType;
+    
+    public override bool UseDontDestroyOnLoad => true;
 
     #endregion
 
     #region Mono Behaviour
 
-    void Start()
+    protected override void OnAwake()
     {
-        items = new Dictionary<Item.ItemType, int>();
+        //Setup types
+        _items = new Dictionary<Item.ItemType, int>();
+        _itemsType = new List<Item.ItemType>();
+        foreach (Item.ItemType type in Enum.GetValues(typeof(Item.ItemType)))
+        {
+            _items.Add(type, 0);
+            _itemsType.Add(type);
+        }
     }
 
     #endregion
@@ -36,9 +57,9 @@ public class ItemManager : Singleton<ItemManager>
     /// <returns></returns>
     public int GetItemValue(Item.ItemType type)
     {
-        if (items.ContainsKey(type))
+        if (_items.ContainsKey(type))
         {
-            return items[type];
+            return _items[type];
         }
         else
         {
@@ -50,19 +71,64 @@ public class ItemManager : Singleton<ItemManager>
     /// Fonction permettant d'ajouter des ressources au joueur
     /// </summary>
     /// <param name="type">Le type d'objet</param>
-    /// <param name="quantity">La quantité dont on augmente le joueur</param>
+    /// <param name="quantity">La quantité dont on augmente le joueur. NOTE : si la quantité est négative elle sera automatiquement passée en positif.</param>
     public void GainItem(Item.ItemType type, int quantity)
     {
-        if (items.ContainsKey(type))
+        if (quantity < 0)
         {
-            items[type] += quantity;
+            Debug.LogWarning($"Gain value of item {type} is negative; value has been set to positive");
+            quantity = -quantity;
+        }
+        
+        if (_items.ContainsKey(type))
+        {
+            //Update Value
+            _items[type] += quantity;
+            //Update UI
+            uiManager.UpdateUI(type, _items[type]);
         }
         else
         {
-           items.Add(type, quantity);
+           _items.Add(type, quantity);
+           _itemsType.Add(type);
         }
     }
 
+    /// <summary>
+    /// Fonction permettant de payer une certaine quantité d'une ressource
+    /// </summary>
+    /// <param name="type">Type de l'objet</param>
+    /// <param name="quantity">Quantité payée. NOTE : si la quantité est négative elle sera automatiquement passée en positif.</param>
+    public void PayItem(Item.ItemType type, int quantity)
+    {
+        if (quantity < 0)
+        {
+            Debug.LogWarning($"Paid value of item {type} is negative; value has been set to positive");
+            quantity = -quantity;
+        }
+        
+        if (_items.ContainsKey(type))
+        {
+            //Check for negative values
+            int itemValue = _items[type];
+            if (itemValue - quantity < 0)
+            {
+                Debug.LogWarning($"Can't have a negative value, trying to remove {quantity} from {itemValue}");
+                return;
+            }
+            
+            //Update value
+            _items[type] -= quantity;
+            
+            //Update UI
+            uiManager.UpdateUI(type, _items[type]);
+        }
+        else
+        {
+            Debug.LogWarning($"Trying to pay with a non existent currency : {type}");
+        }
+    }
+    
     #endregion
 
     #region Private Methods
