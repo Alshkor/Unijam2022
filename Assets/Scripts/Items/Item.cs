@@ -24,6 +24,7 @@ public class Item : MonoBehaviour
 
     [SerializeField] private ItemType type = ItemType.Or;
     private int value = 1;
+    private bool taken = false;
 
     #endregion
 
@@ -31,9 +32,10 @@ public class Item : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.transform.CompareTag("Player"))
+        if (other.gameObject.transform.CompareTag("Player") && !taken)
         {
             ItemManager.Instance.GainItem(type, value);
+            taken = true;
             StartCoroutine(Disappear());
         }
         else
