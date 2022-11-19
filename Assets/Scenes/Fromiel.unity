@@ -249,11 +249,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Asset: {fileID: -944628639613478452, guid: 230e719bb13c46b408c79fe1cc8f05c5, type: 3}
   m_ActionId: eb56a410-8722-4db4-bd38-9477a52734ac
---- !u!1 &791135801 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 55623386128883035, guid: f9254659f8203c843a280400a38944d2, type: 3}
-  m_PrefabInstance: {fileID: 1972569079}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &972549487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -498,10 +493,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseMenuHolder
       objectReference: {fileID: 0}
-    - target: {fileID: 55623385293059432, guid: f9254659f8203c843a280400a38944d2, type: 3}
-      propertyPath: resumeButton
-      value: 
-      objectReference: {fileID: 791135801}
     - target: {fileID: 55623385293059433, guid: f9254659f8203c843a280400a38944d2, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -545,30 +536,6 @@ PrefabInstance:
     - target: {fileID: 55623385293059433, guid: f9254659f8203c843a280400a38944d2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 55623386033688548, guid: f9254659f8203c843a280400a38944d2, type: 3}
-      propertyPath: m_Colors.m_SelectedColor.b
-      value: 0.8627451
-      objectReference: {fileID: 0}
-    - target: {fileID: 55623386033688548, guid: f9254659f8203c843a280400a38944d2, type: 3}
-      propertyPath: m_Colors.m_SelectedColor.g
-      value: 0.8627451
-      objectReference: {fileID: 0}
-    - target: {fileID: 55623386033688548, guid: f9254659f8203c843a280400a38944d2, type: 3}
-      propertyPath: m_Colors.m_SelectedColor.r
-      value: 0.8627451
-      objectReference: {fileID: 0}
-    - target: {fileID: 55623386128883037, guid: f9254659f8203c843a280400a38944d2, type: 3}
-      propertyPath: m_Colors.m_SelectedColor.b
-      value: 0.8627451
-      objectReference: {fileID: 0}
-    - target: {fileID: 55623386128883037, guid: f9254659f8203c843a280400a38944d2, type: 3}
-      propertyPath: m_Colors.m_SelectedColor.g
-      value: 0.8627451
-      objectReference: {fileID: 0}
-    - target: {fileID: 55623386128883037, guid: f9254659f8203c843a280400a38944d2, type: 3}
-      propertyPath: m_Colors.m_SelectedColor.r
-      value: 0.8627451
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9254659f8203c843a280400a38944d2, type: 3}

@@ -6415,14 +6415,26 @@ MonoBehaviour:
   button2: {fileID: 1953229221}
   button3: {fileID: 852661084}
   button4: {fileID: 1641172998}
-  buttonSellAll1: {fileID: 0}
-  buttonSellAll2: {fileID: 0}
-  buttonSellAll3: {fileID: 0}
-  buttonSellAll4: {fileID: 0}
+  buttonSellAll1: {fileID: 1359396020}
+  buttonSellAll2: {fileID: 702404581}
+  buttonSellAll3: {fileID: 936554017}
+  buttonSellAll4: {fileID: 1008060946}
   prices: 0a000000140000001e00000028000000
-  distanceTexts: []
-  priceTexts: []
-  priceAllTexts: []
+  distanceTexts:
+  - {fileID: 38920119}
+  - {fileID: 329087253}
+  - {fileID: 2030738877}
+  - {fileID: 447290620}
+  priceTexts:
+  - {fileID: 1125608332}
+  - {fileID: 1227135399}
+  - {fileID: 114623818}
+  - {fileID: 240177261}
+  priceAllTexts:
+  - {fileID: 1886135931}
+  - {fileID: 803103714}
+  - {fileID: 1361495805}
+  - {fileID: 1246789073}
 --- !u!1 &1858884366
 GameObject:
   m_ObjectHideFlags: 0
