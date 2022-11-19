@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4912192615523208391
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4912192615523208389}
+  - component: {fileID: 4912192615523208388}
+  m_Layer: 0
+  m_Name: lol
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4912192615523208389
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4912192615523208391}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -14.988702, y: -4.079196, z: 3.6918585}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4912192615523208388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4912192615523208391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e28a245c3ba82b64dabe6fe43ee135bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainScene: GenerationAuto
+  mainMenu: MainMenu
+  shopMenu: Shop
+  loseMenu: LoseMenu
+  ruleTile: {fileID: 11400000, guid: e1e9d0b50f231844f8a0f7d67dbecedb, type: 2}
+  orange: {fileID: 6910152057977778070, guid: ce9a41d30edea5841bfb4b74c62ccf24, type: 3}
+  vert: {fileID: 6910152057977778070, guid: 0e48f3fb34aefd1418ddd3e707da03b1, type: 3}
+  bleu: {fileID: 6910152057977778070, guid: 901f80ce134aa4b449769561f73fdfdf, type: 3}
+  violet: {fileID: 6910152057977778070, guid: 2e7f1313004052b48a1f78797df4d02a, type: 3}
+  biome: 0
