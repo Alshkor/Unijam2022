@@ -11,6 +11,7 @@ namespace Ui
         [SerializeField] private Button playButton;
         [SerializeField] private Button creditButton;
         [SerializeField] private string mainScene;
+        [SerializeField] private string creditsScene;
 
         public override void Cancel()
         {
@@ -34,7 +35,7 @@ namespace Ui
 
         private void OpenCredit()
         {
-            
+            SceneManager.LoadScene(creditsScene);
         }
     }
 }
