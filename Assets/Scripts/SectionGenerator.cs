@@ -20,23 +20,25 @@ public class SectionGenerator : MonoBehaviour
     private int shop=0;
 
     #endregion
+    
     public void NewSection()
     {
         if (shop < sectionsBeforeShop)
         {
+            shop += 1;
             int i = Random.Range(0, sections.Count);
             GameObject sec = Instantiate(sections[i], transform);
             sec.transform.position = lastSection.transform.position + new Vector3(offsetSection, 0, 0);
             lastSection = sec;
-            shop += 1;
+            
 
         }
-        else
+        if(shop==sectionsBeforeShop)
         {
             GameObject sec = Instantiate(sectionsShop, transform);
             sec.transform.position = lastSection.transform.position + new Vector3(offsetSection, 0, 0);
             lastSection = sec;
-            shop = 0;
+            shop += 1;
         }
     }
 }

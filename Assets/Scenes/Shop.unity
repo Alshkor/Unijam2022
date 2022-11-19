@@ -3689,7 +3689,7 @@ MonoBehaviour:
   hasPreviousMenu: 0
   previousMenu: {fileID: 0}
   cancelButton: {fileID: 578082636}
-  image: {fileID: 0}
+  image: {fileID: 1055493328}
   sellMenu: {fileID: 1772661493}
   buyMenu: {fileID: 1549310951}
   sellButton: {fileID: 1762082867}
@@ -5685,7 +5685,7 @@ MonoBehaviour:
   hasPreviousMenu: 1
   previousMenu: {fileID: 1055493330}
   cancelButton: {fileID: 1115564952}
-  image: {fileID: 0}
+  image: {fileID: 1549310953}
   currentStaminaButton: {fileID: 1498214160}
   maxStaminaButton: {fileID: 406201652}
   priceCurrentStamina: 20
@@ -6410,7 +6410,7 @@ MonoBehaviour:
   hasPreviousMenu: 1
   previousMenu: {fileID: 1055493330}
   cancelButton: {fileID: 17936983}
-  image: {fileID: 0}
+  image: {fileID: 1772661495}
   button1: {fileID: 1247595120}
   button2: {fileID: 1953229221}
   button3: {fileID: 852661084}

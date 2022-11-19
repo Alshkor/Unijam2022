@@ -5,8 +5,8 @@ using UnityEngine.InputSystem;
 
 public class InputHandler : MonoBehaviour
 {
-    #region attribute
-    
+        #region attribute
+    [SerializeField] private PauseMenu pauseMenu;   
     [SerializeField] PlayerMovement _playerMovement;
     
 
@@ -20,5 +20,10 @@ public class InputHandler : MonoBehaviour
     {
         float val = value.Get<float>();
         _playerMovement.InputSprint(val);
+    }
+
+    void OnPause(InputValue val)
+    {
+        pauseMenu.Pause();
     }
 }
