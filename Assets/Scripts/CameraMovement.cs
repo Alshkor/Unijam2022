@@ -14,6 +14,11 @@ public class CameraMovement : MonoBehaviour
 
     #region Monobehavior Callback
 
+    private void Start()
+    {
+        GameManager.Instance.OnLoad();
+    }
+
     private void FixedUpdate()
     {
         transform.Translate(Vector3.right*(speedCamera*Time.deltaTime));
