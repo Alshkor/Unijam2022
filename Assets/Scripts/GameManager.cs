@@ -81,6 +81,7 @@ public class GameManager : Singleton<GameManager>
     public void LoadNewLevel()
     {
         biome = (biome + 1) % 4; // On change de biome
+        OnNewLevel?.Invoke();
         SceneManager.LoadScene(mainScene);
     }
 
@@ -111,6 +112,11 @@ public class GameManager : Singleton<GameManager>
     {
         SceneManager.LoadScene(loseMenu);
     }
+    
+    
+    public delegate void OnNewLevelEventHandler();
+    public event OnNewLevelEventHandler OnNewLevel;
+    
     
 
     #endregion

@@ -1,4 +1,3 @@
-using System;
 using Ui;
 using UI;
 using UnityEngine;
@@ -11,6 +10,8 @@ namespace Shop
     {
         #region Attributes
 
+        [SerializeField] private Image image;
+
         [SerializeField] private GameObject sellMenu;
         [SerializeField] private GameObject buyMenu;
         [SerializeField] private Button sellButton;
@@ -20,6 +21,7 @@ namespace Shop
 
         private void OnEnable()
         {
+            image.color = GameManager.Instance.getColor();
             EventSystem.current.SetSelectedGameObject(null);
             EventSystem.current.SetSelectedGameObject(sellButton.gameObject);
         }
