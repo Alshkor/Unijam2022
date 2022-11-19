@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -10,10 +11,17 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject ui;
     [SerializeField] TextMeshProUGUI resumeText;
     [SerializeField] GameObject buttonHolder;
+    [SerializeField] private GameObject resumeButton;
 
     void Start(){
         ui.SetActive(false);
         resumeText.gameObject.SetActive(false);
+    }
+    
+    private void OnEnable()
+    {
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(resumeButton);
     }
     
     public void Pause(){
