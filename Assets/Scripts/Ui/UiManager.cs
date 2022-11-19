@@ -1,4 +1,6 @@
+using System;
 using UI;
+using UnityEngine;
 
 namespace Ui
 {
@@ -7,6 +9,7 @@ namespace Ui
         #region Attributes
 
         public CancelableUi currentUi;
+        [SerializeField] CreditsMenu creditmenu;
         
         #endregion
 
@@ -16,6 +19,8 @@ namespace Ui
         {
             if(currentUi != null)
                 currentUi.Cancel();
+            if (creditmenu != null)
+                creditmenu.retourMenu();
         }
 
         #endregion
