@@ -939,7 +939,7 @@ MonoBehaviour:
   cancelButton: {fileID: 1295717007}
   playButton: {fileID: 1534539160}
   creditButton: {fileID: 2074619306}
-  mainScene: Shop
+  mainScene: GenerationAuto
 --- !u!1 &993791927
 GameObject:
   m_ObjectHideFlags: 0
