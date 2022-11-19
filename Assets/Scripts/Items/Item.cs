@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
+using UnityEngine.Events;
 
 /// <summary>
 /// Class mère des objets
@@ -26,7 +27,9 @@ public class Item : MonoBehaviour
     private ItemType type;
     private int value = 1;
     private bool taken = false;
-
+    [SerializeField] private UnityEvent onDisappear;
+    [SerializeField] private float timeDisappear;
+    
     #endregion
 
     #region Mono Behaviour handlers
@@ -58,7 +61,8 @@ public class Item : MonoBehaviour
         {
             ItemManager.Instance.GainItem(type, value);
             taken = true;
-            StartCoroutine(Disappear());
+            onDisappear.Invoke();
+            StartCoroutine(Disappear(timeDisappear));
         }
         else
         {
