@@ -3612,7 +3612,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1055493327
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3689,6 +3689,7 @@ MonoBehaviour:
   hasPreviousMenu: 0
   previousMenu: {fileID: 0}
   cancelButton: {fileID: 578082636}
+  image: {fileID: 0}
   sellMenu: {fileID: 1772661493}
   buyMenu: {fileID: 1549310951}
   sellButton: {fileID: 1762082867}
@@ -5684,6 +5685,7 @@ MonoBehaviour:
   hasPreviousMenu: 1
   previousMenu: {fileID: 1055493330}
   cancelButton: {fileID: 1115564952}
+  image: {fileID: 0}
   currentStaminaButton: {fileID: 1498214160}
   maxStaminaButton: {fileID: 406201652}
   priceCurrentStamina: 20
@@ -6329,7 +6331,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1772661494
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6408,11 +6410,19 @@ MonoBehaviour:
   hasPreviousMenu: 1
   previousMenu: {fileID: 1055493330}
   cancelButton: {fileID: 17936983}
+  image: {fileID: 0}
   button1: {fileID: 1247595120}
   button2: {fileID: 1953229221}
   button3: {fileID: 852661084}
   button4: {fileID: 1641172998}
+  buttonSellAll1: {fileID: 0}
+  buttonSellAll2: {fileID: 0}
+  buttonSellAll3: {fileID: 0}
+  buttonSellAll4: {fileID: 0}
   prices: 0a000000140000001e00000028000000
+  distanceTexts: []
+  priceTexts: []
+  priceAllTexts: []
 --- !u!1 &1858884366
 GameObject:
   m_ObjectHideFlags: 0

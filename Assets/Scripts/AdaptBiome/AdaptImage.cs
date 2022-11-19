@@ -13,16 +13,16 @@ public class AdaptImage : MonoBehaviour
         switch (GameManager.Instance.biome)
         {
             case 0:
-                colorBiome = new Color(195, 31, 57);
+                colorBiome = new Color(0.76f, 0.12f, 0.22f);
                 break;
             case 1:
-                colorBiome = new Color(195, 31, 57);
+                colorBiome =new Color(0.76f, 0.12f, 0.22f);
                 break;
             case 2:
-                colorBiome = new Color(195, 31, 57);
+                colorBiome = new Color(0.76f, 0.12f, 0.22f);
                 break;
             case 3:
-                colorBiome = new Color(195, 31, 57);
+                colorBiome = new Color(0.76f, 0.12f, 0.22f);
                 break;
             default:
                 break;

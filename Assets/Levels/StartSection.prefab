@@ -347,7 +347,7 @@ GameObject:
   - component: {fileID: 4420449987262369818}
   - component: {fileID: 4876814623910530891}
   m_Layer: 7
-  m_Name: Section4Orange
+  m_Name: StartSection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
