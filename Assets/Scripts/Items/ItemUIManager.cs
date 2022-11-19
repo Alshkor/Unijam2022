@@ -9,6 +9,7 @@ public class ItemUIManager : MonoBehaviour
 {
     private Dictionary<Item.ItemType, TextMeshProUGUI> _dictTypeText;
     private GameObject _textHolder;
+    [SerializeField] private TextMeshProUGUI moneyText;
 
     private void Start()
     {
@@ -60,5 +61,11 @@ public class ItemUIManager : MonoBehaviour
             _dictTypeText[type].text = $"{type} : {value}";
         }
     }
-    
+
+
+    public void UpdateScore(int value)
+    {
+        moneyText.text = value + " CAD";
+    }
+
 }

@@ -20,6 +20,19 @@ public class ItemManager : Singleton<ItemManager>
     /// </summary>
     private Dictionary<Item.ItemType, int> _items;
 
+    private int _money;
+    public int Money
+    {
+        get => _money;
+        set
+        {
+            if (value < 0)
+                return;
+            _money = value;
+            uiManager.UpdateScore(_money);
+        }
+    }
+
     /// <summary>
     /// List of our types
     /// </summary>
