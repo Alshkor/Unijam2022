@@ -69,8 +69,8 @@ namespace Shop
             int biome = GameManager.Instance.biome;
             for (int i = 0; i < 4; i++)
             {
-                priceTexts[i].text = prices[1 + (i + biome) % 4] + " CAD";
-                priceAllTexts[i].text = prices[1 + (i + biome) % 4]*ItemManager.Instance.GetItemValue(types[i]) + " CAD";
+                priceTexts[i].text = prices[(i + biome) % 4] + " CAD";
+                priceAllTexts[i].text = prices[(i + biome) % 4]*ItemManager.Instance.GetItemValue(types[i]) + " CAD";
                 distanceTexts[i].text = (i + biome) % 4 + "";
             }
         }
@@ -124,19 +124,19 @@ namespace Shop
             switch (itemType)
             {
                 case Item.ItemType.Orange:
-                    money = prices[1 + biome % 4] * manager.GetItemValue(itemType);
+                    money = prices[biome % 4] * manager.GetItemValue(itemType);
                     manager.PayItem(itemType, manager.GetItemValue(itemType));
                     break;
                 case Item.ItemType.Vert:
-                    money = prices[1 + (1 + biome) % 4] * manager.GetItemValue(itemType);
+                    money = prices[(1 + biome) % 4] * manager.GetItemValue(itemType);
                     manager.PayItem(itemType, manager.GetItemValue(itemType));
                     break;
                 case Item.ItemType.Bleu:
-                    money = prices[1 + (2 + biome) % 4] * manager.GetItemValue(itemType);
+                    money = prices[(2 + biome) % 4] * manager.GetItemValue(itemType);
                     manager.PayItem(itemType, manager.GetItemValue(itemType));
                     break;
                 case Item.ItemType.Violet:
-                    money = prices[1 + (3 + biome) % 4] * manager.GetItemValue(itemType);
+                    money = prices[(3 + biome) % 4] * manager.GetItemValue(itemType);
                     manager.PayItem(itemType, manager.GetItemValue(itemType));
                     break;
             }
