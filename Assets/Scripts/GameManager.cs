@@ -30,13 +30,13 @@ public class GameManager : Singleton<GameManager>
         switch (biome)
         {
             case 0:
-                return new Color(231, 129, 36);
+                return new Color(0.91f, 0.51f, 0.14f);
             case 1:
                 return Color.green;
             case 2:
                 return Color.blue;
             case 3:
-                return new Color(176, 34, 140);
+                return new Color(0.69f, 0.13f, 0.55f);
             default:
                 return Color.white;
         }
