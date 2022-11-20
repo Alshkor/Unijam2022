@@ -7,8 +7,8 @@ public class SoundMuter : MonoBehaviour
 {
     private GameObject SFXHolder;
     private GameObject MusicHolder;
-    private bool hasSfx = true;
-    private bool hasMusic = true;
+    private bool hasSfx;
+    private bool hasMusic;
 
     [SerializeField] private TextMeshProUGUI textMusic;
     [SerializeField] private TextMeshProUGUI textSfx;

@@ -192,6 +192,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 207eea569c41d2c408a0676b6a2d3fe6, type: 3}
+--- !u!114 &140895019 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 533842596370017340, guid: 207eea569c41d2c408a0676b6a2d3fe6, type: 3}
+  m_PrefabInstance: {fileID: 140895018}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66ef7b0b60093424abd039acd93e3908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &729686680
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -271,6 +282,10 @@ PrefabInstance:
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 729686681}
+    - target: {fileID: 4068932606708498939, guid: 9c58755fc343aad4e8cb147040905483, type: 3}
+      propertyPath: soundMuter
+      value: 
+      objectReference: {fileID: 140895019}
     - target: {fileID: 6682908902529863780, guid: 9c58755fc343aad4e8cb147040905483, type: 3}
       propertyPath: m_RootOrder
       value: 1
