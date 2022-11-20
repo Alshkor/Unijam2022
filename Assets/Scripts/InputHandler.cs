@@ -30,7 +30,7 @@ public class InputHandler : MonoBehaviour
     }
 
     
-    /*void OnEndLevel()
+    void OnEndLevel()
     {
         GameManager.Instance.GoToShop();
     }
@@ -53,7 +53,7 @@ public class InputHandler : MonoBehaviour
     void OnVert()
     {
         ItemManager.Instance.GainItem(Item.ItemType.Vert, 1);
-    }*/
+    }
 
     void OnMuteSfx()
     {
