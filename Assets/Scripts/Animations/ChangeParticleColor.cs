@@ -10,13 +10,10 @@ public class ChangeParticleColor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _system = GetComponent<ParticleSystem>();
         ParticleSystem.MainModule main = _system.main;
-        main.startColor = new ParticleSystem.MinMaxGradient(GameManager.Instance.getColor());
+        Color col = GameManager.Instance.getColor();
+        main.startColor = new ParticleSystem.MinMaxGradient(col);
     }
-
-    void ChangeSystemColor()
-    {
-    }
-    
-    
+   
 }
