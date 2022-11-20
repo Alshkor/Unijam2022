@@ -116,6 +116,7 @@ public class GameManager : Singleton<GameManager>
         //todo ajouter d'autres chose a detruire si jamsi il le faut
         Destroy(ItemManager.Instance.gameObject);
         Destroy(gameObject);
+        CameraMovement._isInit = false;
         SceneManager.LoadScene(mainMenu);
     }
 

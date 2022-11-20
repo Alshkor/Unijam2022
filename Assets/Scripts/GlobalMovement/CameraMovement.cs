@@ -5,10 +5,10 @@ public class CameraMovement : MonoBehaviour
     #region public Attribute
 
     [SerializeField] private float speedCamera=1;
-
+    
     private static float _speedCameraS;
 
-    private static bool _isInit;
+    public static bool _isInit;
     public static float SpeedCamera => _speedCameraS;
     #endregion
 
