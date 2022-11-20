@@ -192,6 +192,74 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 207eea569c41d2c408a0676b6a2d3fe6, type: 3}
+--- !u!1001 &729686680
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 55623385293059430, guid: f9254659f8203c843a280400a38944d2, type: 3}
+      propertyPath: m_Name
+      value: PauseMenuHolder
+      objectReference: {fileID: 0}
+    - target: {fileID: 55623385293059433, guid: f9254659f8203c843a280400a38944d2, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 55623385293059433, guid: f9254659f8203c843a280400a38944d2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 960
+      objectReference: {fileID: 0}
+    - target: {fileID: 55623385293059433, guid: f9254659f8203c843a280400a38944d2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 540
+      objectReference: {fileID: 0}
+    - target: {fileID: 55623385293059433, guid: f9254659f8203c843a280400a38944d2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 55623385293059433, guid: f9254659f8203c843a280400a38944d2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 55623385293059433, guid: f9254659f8203c843a280400a38944d2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 55623385293059433, guid: f9254659f8203c843a280400a38944d2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 55623385293059433, guid: f9254659f8203c843a280400a38944d2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 55623385293059433, guid: f9254659f8203c843a280400a38944d2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 55623385293059433, guid: f9254659f8203c843a280400a38944d2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 55623385293059433, guid: f9254659f8203c843a280400a38944d2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f9254659f8203c843a280400a38944d2, type: 3}
+--- !u!114 &729686681 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 55623385293059432, guid: f9254659f8203c843a280400a38944d2, type: 3}
+  m_PrefabInstance: {fileID: 729686680}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a940a4dfb64dc64ab2f007e02824afb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &838875982
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -199,6 +267,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4068932606708498939, guid: 9c58755fc343aad4e8cb147040905483, type: 3}
+      propertyPath: pauseMenu
+      value: 
+      objectReference: {fileID: 729686681}
     - target: {fileID: 6682908902529863780, guid: 9c58755fc343aad4e8cb147040905483, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -479,7 +551,7 @@ PrefabInstance:
     - target: {fileID: 790920705657014396, guid: 7473299d9638d434a8eeea547639a0ff, type: 3}
       propertyPath: m_TileObjectToInstantiateArray.Array.data[0].m_Data
       value: 
-      objectReference: {fileID: 6910152057977778070, guid: ce9a41d30edea5841bfb4b74c62ccf24, type: 3}
+      objectReference: {fileID: 3364012450383009267, guid: f2947d28a40c0c94e9b109857ded9066, type: 3}
     - target: {fileID: 790920705657014396, guid: 7473299d9638d434a8eeea547639a0ff, type: 3}
       propertyPath: m_TileObjectToInstantiateArray.Array.data[0].m_RefCount
       value: 1
