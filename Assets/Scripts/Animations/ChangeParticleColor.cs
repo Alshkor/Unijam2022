@@ -5,18 +5,17 @@ using UnityEngine;
 public class ChangeParticleColor : MonoBehaviour
 {
     private ParticleSystem _system;
-    
+    private static Color actualColor;
     
     // Start is called before the first frame update
     void Start()
     {
-        GameManager.Instance.OnNewLevel += ChangeSystemColor;
+        ParticleSystem.MainModule main = _system.main;
+        main.startColor = new ParticleSystem.MinMaxGradient(GameManager.Instance.getColor());
     }
 
     void ChangeSystemColor()
     {
-        ParticleSystem.MainModule main = _system.main;
-        main.startColor = new ParticleSystem.MinMaxGradient(GameManager.Instance.getColor());
     }
     
     
