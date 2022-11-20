@@ -215,6 +215,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -10
       objectReference: {fileID: 0}
+    - target: {fileID: 980371721091598899, guid: 9c58755fc343aad4e8cb147040905483, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849020120098164385, guid: 9c58755fc343aad4e8cb147040905483, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5029581994314876382, guid: 9c58755fc343aad4e8cb147040905483, type: 3}
       propertyPath: jumpSpeed
       value: 25
