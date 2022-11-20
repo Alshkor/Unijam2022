@@ -1,3 +1,4 @@
+using System;
 using Ui;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -154,6 +155,12 @@ public class GameManager : Singleton<GameManager>
             default:
                 return orange;
         }
+    }
+
+
+    private void Start()
+    {
+        Application.targetFrameRate = 80;
     }
 
     #endregion

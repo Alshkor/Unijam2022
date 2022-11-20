@@ -556,6 +556,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelGenerator
       objectReference: {fileID: 0}
+    - target: {fileID: 2858249002924168062, guid: 7473299d9638d434a8eeea547639a0ff, type: 3}
+      propertyPath: sectionsBeforeShop
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2858249002924168062, guid: 7473299d9638d434a8eeea547639a0ff, type: 3}
+      propertyPath: sections.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2858249002924168062, guid: 7473299d9638d434a8eeea547639a0ff, type: 3}
+      propertyPath: sections.Array.data[3]
+      value: 
+      objectReference: {fileID: 8492763649630090648, guid: 4ee1c3267b2447d49a8b1ed9e267c392, type: 3}
     - target: {fileID: 2858249002924168063, guid: 7473299d9638d434a8eeea547639a0ff, type: 3}
       propertyPath: m_RootOrder
       value: 2
