@@ -694,7 +694,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6682908901566096140
 Transform:
   m_ObjectHideFlags: 0
@@ -6051,6 +6051,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: player_test
       objectReference: {fileID: 0}
+    - target: {fileID: 1305325137044681080, guid: 3e526f7e838171d40a24d56342b1a409, type: 3}
+      propertyPath: m_Interpolate
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1305325137044681082, guid: 3e526f7e838171d40a24d56342b1a409, type: 3}
       propertyPath: m_Size.x
       value: 0.1692543
@@ -6207,6 +6211,14 @@ PrefabInstance:
       propertyPath: jumpSound
       value: 
       objectReference: {fileID: 8300000, guid: 2c5292ba5cf254919a6b9e2b18e04f49, type: 3}
+    - target: {fileID: 6858864745061410283, guid: 3e526f7e838171d40a24d56342b1a409, type: 3}
+      propertyPath: jumpSpeed
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858864745061410283, guid: 3e526f7e838171d40a24d56342b1a409, type: 3}
+      propertyPath: jumpForce.y
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 7663234353639253180, guid: 3e526f7e838171d40a24d56342b1a409, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.2
