@@ -147,16 +147,12 @@ public class GameManager : Singleton<GameManager>
         {
             case 0:
                 return orange;
-                break;
             case 1:
                 return vert;
-                break;
             case 2:
                 return bleu;
-                break;
             case 3:
                 return violet;
-                break;
             default:
                 return orange;
         }
