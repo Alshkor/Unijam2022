@@ -71,7 +71,7 @@ namespace Shop
             {
                 priceTexts[i].text = prices[(4 - i + biome) % 4] + " CAD";
                 priceAllTexts[i].text = prices[(4 - i + biome) % 4]*ItemManager.Instance.GetItemValue(types[i]) + " CAD";
-                distanceTexts[i].text = (4 - i + biome) % 4 + "";
+                distanceTexts[i].text = "Distance au biome : "+  (4 - i + biome) % 4;
             }
         }
 
