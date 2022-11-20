@@ -38,7 +38,7 @@ namespace Shop
             base.SetButtonClickEvent();
             currentStaminaButton.onClick.AddListener(BuyCurrentStamina);
             priceCurrentStaminaText.text = priceCurrentStamina + " CAD";
-            currentStaminaButton.onClick.AddListener(BuyMaxStamina);
+            maxStaminaButton.onClick.AddListener(BuyMaxStamina);
             priceMaxStaminaText.text = priceMaxStamina + " CAD";
         }
 

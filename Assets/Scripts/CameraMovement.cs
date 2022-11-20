@@ -4,9 +4,11 @@ public class CameraMovement : MonoBehaviour
 {
     #region public Attribute
 
-    public float speedCamera=1;
+    [SerializeField] private float speedCamera=1;
 
     private static float _speedCameraS;
+
+    private static bool _isInit;
     public static float SpeedCamera => _speedCameraS;
     #endregion
 
@@ -14,9 +16,13 @@ public class CameraMovement : MonoBehaviour
 
     private void Start()
     {
-        _speedCameraS = speedCamera;
+        if (!_isInit)
+            _speedCameraS = speedCamera;
+        else
+            speedCamera = _speedCameraS;
         GameManager.Instance.OnLoad();
         GameManager.Instance.OnNewLevel += () => UpdateSpeed(0.5f);
+        _isInit = true;
     }
 
     public void UpdateSpeed(float val)

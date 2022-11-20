@@ -42,15 +42,15 @@ namespace Shop
         public override void SetButtonClickEvent()
         {
             cancelButton.onClick.AddListener(Cancel);
-            button1.onClick.AddListener(() => Sell(Item.ItemType.Violet));
-            button2.onClick.AddListener(() => Sell(Item.ItemType.Orange));
+            button1.onClick.AddListener(() => Sell(Item.ItemType.Orange));
+            button2.onClick.AddListener(() => Sell(Item.ItemType.Vert));
             button3.onClick.AddListener(() => Sell(Item.ItemType.Bleu));
-            button4.onClick.AddListener(() => Sell(Item.ItemType.Vert));
+            button4.onClick.AddListener(() => Sell(Item.ItemType.Violet));
             
-            buttonSellAll1.onClick.AddListener(() => SellAll(Item.ItemType.Violet));
-            buttonSellAll2.onClick.AddListener(() => SellAll(Item.ItemType.Orange));
+            buttonSellAll1.onClick.AddListener(() => SellAll(Item.ItemType.Orange));
+            buttonSellAll2.onClick.AddListener(() => SellAll(Item.ItemType.Vert));
             buttonSellAll3.onClick.AddListener(() => SellAll(Item.ItemType.Bleu));
-            buttonSellAll4.onClick.AddListener(() => SellAll(Item.ItemType.Vert));
+            buttonSellAll4.onClick.AddListener(() => SellAll(Item.ItemType.Violet));
             
             SetTexts();
             
@@ -69,9 +69,9 @@ namespace Shop
             int biome = GameManager.Instance.biome;
             for (int i = 0; i < 4; i++)
             {
-                priceTexts[i].text = prices[(i + biome) % 4] + " CAD";
-                priceAllTexts[i].text = prices[(i + biome) % 4]*ItemManager.Instance.GetItemValue(types[i]) + " CAD";
-                distanceTexts[i].text = (i + biome) % 4 + "";
+                priceTexts[i].text = prices[(4 - i + biome) % 4] + " CAD";
+                priceAllTexts[i].text = prices[(4 - i + biome) % 4]*ItemManager.Instance.GetItemValue(types[i]) + " CAD";
+                distanceTexts[i].text = (4 - i + biome) % 4 + "";
             }
         }
 
@@ -86,25 +86,25 @@ namespace Shop
                 case Item.ItemType.Orange:
                     if (manager.GetItemValue(itemType) <= 0)
                         return;
-                    money = prices[1 + biome % 4];
+                    money = prices[biome % 4];
                     manager.PayItem(itemType, 1);
                     break;
                 case Item.ItemType.Vert:
                     if (manager.GetItemValue(itemType) <= 0)
                         return;
-                    money = prices[1 +(1 + biome) % 4];
+                    money = prices[(3 + biome) % 4];
                     manager.PayItem(itemType, 1);
                     break;
                 case Item.ItemType.Bleu:
                     if (manager.GetItemValue(itemType) <= 0)
                         return;
-                    money = prices[1 + (2 + biome) % 4];
+                    money = prices[(2 + biome) % 4];
                     manager.PayItem(itemType, 1);
                     break;
                 case Item.ItemType.Violet:
                     if (manager.GetItemValue(itemType) <= 0)
                         return;
-                    money = prices[1 + (3 + biome) % 4];
+                    money = prices[(1 + biome) % 4];
                     manager.PayItem(itemType, 1);
                     break;
             }
