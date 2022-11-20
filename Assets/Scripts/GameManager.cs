@@ -140,26 +140,24 @@ public class GameManager : Singleton<GameManager>
     public delegate void OnNewLevelEventHandler();
     public event OnNewLevelEventHandler OnNewLevel;
 
-    public GameObject GetItemGameObject()
+    private void Start()
     {
-
+        /*_ruleTile = Resources.Load<RuleTile>("ItemJaune");
         switch (biome)
         {
             case 0:
-                return orange;
+                _ruleTile.m_DefaultGameObject = orange;
                 break;
             case 1:
-                return vert;
+                _ruleTile.m_DefaultGameObject = vert;
                 break;
             case 2:
-                return bleu;
+                _ruleTile.m_DefaultGameObject = bleu;
                 break;
             case 3:
-                return violet;
+                _ruleTile.m_DefaultGameObject = violet;
                 break;
-            default:
-                return orange;
-        }
+        }*/
     }
 
     #endregion

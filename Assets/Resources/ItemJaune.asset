@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: ItemJaune
   m_EditorClassIdentifier: 
   m_DefaultSprite: {fileID: 21300000, guid: bb51334c6930f864abac38001f7bdf6e, type: 3}
-  m_DefaultGameObject: {fileID: 3364012450383009267, guid: f2947d28a40c0c94e9b109857ded9066, type: 3}
+  m_DefaultGameObject: {fileID: 6910152057977778070, guid: ce9a41d30edea5841bfb4b74c62ccf24, type: 3}
   m_DefaultColliderType: 1
   m_TilingRules: []
