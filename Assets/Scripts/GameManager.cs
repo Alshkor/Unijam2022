@@ -39,9 +39,9 @@ public class GameManager : Singleton<GameManager>
             case 0:
                 return new Color(0.91f, 0.51f, 0.14f);
             case 1:
-                return Color.green;
+                return new Color(39/255f, 111/255f, 8/255f);
             case 2:
-                return Color.blue;
+                return new Color(16/255f, 19/255f, 91/255f);
             case 3:
                 return new Color(0.69f, 0.13f, 0.55f);
             default:
