@@ -586,6 +586,18 @@ PrefabInstance:
       propertyPath: sectionsBeforeShop
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2858249002924168062, guid: 7473299d9638d434a8eeea547639a0ff, type: 3}
+      propertyPath: sections.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2858249002924168062, guid: 7473299d9638d434a8eeea547639a0ff, type: 3}
+      propertyPath: sections.Array.data[3]
+      value: 
+      objectReference: {fileID: 8004507360615534111, guid: e01b36ddf7d61f048a31ee827db5d065, type: 3}
+    - target: {fileID: 2858249002924168062, guid: 7473299d9638d434a8eeea547639a0ff, type: 3}
+      propertyPath: sections.Array.data[4]
+      value: 
+      objectReference: {fileID: 8492763649630090648, guid: 4ee1c3267b2447d49a8b1ed9e267c392, type: 3}
     - target: {fileID: 2858249002924168063, guid: 7473299d9638d434a8eeea547639a0ff, type: 3}
       propertyPath: m_RootOrder
       value: 2
