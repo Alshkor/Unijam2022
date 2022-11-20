@@ -327,6 +327,10 @@ PrefabInstance:
       propertyPath: sprintSpeed
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 7663234354528490637, guid: 9c58755fc343aad4e8cb147040905483, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.458
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c58755fc343aad4e8cb147040905483, type: 3}
 --- !u!1 &915036814

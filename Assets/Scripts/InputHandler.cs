@@ -28,8 +28,8 @@ public class InputHandler : MonoBehaviour
         pauseMenu.Pause();
     }
 
-    /*
-    void OnEndLevel()
+    
+    /*void OnEndLevel()
     {
         GameManager.Instance.GoToShop();
     }
