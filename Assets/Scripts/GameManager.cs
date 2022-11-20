@@ -161,6 +161,7 @@ public class GameManager : Singleton<GameManager>
     private void Start()
     {
         Application.targetFrameRate = 80;
+        OnNewLevel?.Invoke();
     }
 
     #endregion
