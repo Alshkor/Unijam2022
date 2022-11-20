@@ -320,6 +320,10 @@ PrefabInstance:
       value: GlobalMovement
       objectReference: {fileID: 0}
     - target: {fileID: 6858864745413645786, guid: 9c58755fc343aad4e8cb147040905483, type: 3}
+      propertyPath: jumpSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858864745413645786, guid: 9c58755fc343aad4e8cb147040905483, type: 3}
       propertyPath: sprintSpeed
       value: 6
       objectReference: {fileID: 0}
