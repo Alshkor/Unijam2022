@@ -27,5 +27,31 @@ public class InputHandler : MonoBehaviour
     {
         pauseMenu.Pause();
     }
+
+    /*
+    void OnEndLevel()
+    {
+        GameManager.Instance.GoToShop();
+    }
+    
+    void OnOrange()
+    {
+        ItemManager.Instance.GainItem(Item.ItemType.Orange, 1);
+    }
+    
+    void OnViolet()
+    {
+        ItemManager.Instance.GainItem(Item.ItemType.Violet, 1);
+    }
+    
+    void OnBleu()
+    {
+        ItemManager.Instance.GainItem(Item.ItemType.Bleu, 1);
+    }
+    
+    void OnVert()
+    {
+        ItemManager.Instance.GainItem(Item.ItemType.Vert, 1);
+    }*/
     
 }
