@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using Ui;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -8,7 +6,7 @@ public class GameManager : Singleton<GameManager>
 {
     #region Attributes
 
-    private float _playerStamina = 1.5f;
+    private float _playerStamina = 3.0f;
     private float _maxStamina = 3.0f;
 
     [SerializeField] private string mainScene;

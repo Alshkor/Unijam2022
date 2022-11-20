@@ -27,7 +27,7 @@ public class CameraMovement : MonoBehaviour
 
     public void UpdateSpeed(float val)
     {
-        speedCamera += 0.5f;
+        speedCamera += 1.0f;
         _speedCameraS = speedCamera;
     }
 

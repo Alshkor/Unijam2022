@@ -319,6 +319,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GlobalMovement
       objectReference: {fileID: 0}
+    - target: {fileID: 6858864745413645786, guid: 9c58755fc343aad4e8cb147040905483, type: 3}
+      propertyPath: sprintSpeed
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c58755fc343aad4e8cb147040905483, type: 3}
 --- !u!1 &915036814
@@ -548,45 +552,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 790920705657014396, guid: 7473299d9638d434a8eeea547639a0ff, type: 3}
-      propertyPath: m_TileObjectToInstantiateArray.Array.data[0].m_Data
-      value: 
-      objectReference: {fileID: 3364012450383009267, guid: f2947d28a40c0c94e9b109857ded9066, type: 3}
-    - target: {fileID: 790920705657014396, guid: 7473299d9638d434a8eeea547639a0ff, type: 3}
-      propertyPath: m_TileObjectToInstantiateArray.Array.data[0].m_RefCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 790920705657014396, guid: 7473299d9638d434a8eeea547639a0ff, type: 3}
-      propertyPath: m_Tiles.Array.data[3].second.m_TileObjectToInstantiateIndex
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1347268326359410099, guid: 7473299d9638d434a8eeea547639a0ff, type: 3}
-      propertyPath: bleu
-      value: 
-      objectReference: {fileID: 6910152057977778070, guid: 901f80ce134aa4b449769561f73fdfdf, type: 3}
-    - target: {fileID: 1347268326359410099, guid: 7473299d9638d434a8eeea547639a0ff, type: 3}
-      propertyPath: vert
-      value: 
-      objectReference: {fileID: 6910152057977778070, guid: 0e48f3fb34aefd1418ddd3e707da03b1, type: 3}
-    - target: {fileID: 1347268326359410099, guid: 7473299d9638d434a8eeea547639a0ff, type: 3}
-      propertyPath: orange
-      value: 
-      objectReference: {fileID: 6910152057977778070, guid: ce9a41d30edea5841bfb4b74c62ccf24, type: 3}
-    - target: {fileID: 1347268326359410099, guid: 7473299d9638d434a8eeea547639a0ff, type: 3}
-      propertyPath: violet
-      value: 
-      objectReference: {fileID: 6910152057977778070, guid: 2e7f1313004052b48a1f78797df4d02a, type: 3}
-    - target: {fileID: 1347268326359410099, guid: 7473299d9638d434a8eeea547639a0ff, type: 3}
-      propertyPath: ruleTile
-      value: 
-      objectReference: {fileID: 11400000, guid: e1e9d0b50f231844f8a0f7d67dbecedb, type: 2}
     - target: {fileID: 2858249002924168057, guid: 7473299d9638d434a8eeea547639a0ff, type: 3}
       propertyPath: m_Name
       value: LevelGenerator
-      objectReference: {fileID: 0}
-    - target: {fileID: 2858249002924168062, guid: 7473299d9638d434a8eeea547639a0ff, type: 3}
-      propertyPath: sectionsBeforeShop
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2858249002924168063, guid: 7473299d9638d434a8eeea547639a0ff, type: 3}
       propertyPath: m_RootOrder

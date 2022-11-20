@@ -62,9 +62,11 @@ MonoBehaviour:
   - {fileID: 7912526915553232790, guid: 2c1bd32012e4cf5489769decb59fbd1a, type: 3}
   - {fileID: 2230893073350872227, guid: faf74dc420c80f74d8d0eed591595fbe, type: 3}
   - {fileID: 9115859776884769162, guid: 2d19412210e650c4cbedaf39047e9874, type: 3}
+  - {fileID: 8004507360615534111, guid: e01b36ddf7d61f048a31ee827db5d065, type: 3}
+  - {fileID: 8492763649630090648, guid: 4ee1c3267b2447d49a8b1ed9e267c392, type: 3}
   sectionsShop: {fileID: 6837801299555151361, guid: 0cf93a3d2e0ff6e4e88fba915dfbf7a0, type: 3}
   lastSection: {fileID: 790920704170898345}
-  sectionsBeforeShop: 1
+  sectionsBeforeShop: 4
   offsetSection: 130
 --- !u!1001 &4008623576167801778
 PrefabInstance:
