@@ -9,6 +9,7 @@ public class InputHandler : MonoBehaviour
     #region attribute
     [SerializeField] private PauseMenu pauseMenu;   
     [SerializeField] PlayerMovement _playerMovement;
+    [SerializeField] private SoundMuter soundMuter;
     
 
     #endregion
@@ -53,5 +54,15 @@ public class InputHandler : MonoBehaviour
     {
         ItemManager.Instance.GainItem(Item.ItemType.Vert, 1);
     }*/
+
+    void OnMuteSfx()
+    {
+        soundMuter.ToggleSfx();
+    }
+
+    void OnMuteMusic()
+    {
+        soundMuter.ToggleMusic();
+    }
     
 }
