@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     
     public Vector2 jumpForce;
     [SerializeField] private Animator animator;
-
+    [SerializeField] private ParticleSystem runParticle;
     #region Priavate Attribute
 
     private bool _sprintInput;
@@ -96,6 +96,7 @@ public class PlayerMovement : MonoBehaviour
             if (!_isSprinting)
             {
                 runAudio.Play();
+                runParticle.Play();
                 _isSprinting = true;
             }
         }
@@ -103,6 +104,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (_isSprinting)
             {
+                runParticle.Stop();
                 runAudio.Stop();
                 _isSprinting = false;
             }
