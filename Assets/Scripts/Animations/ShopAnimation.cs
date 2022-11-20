@@ -12,14 +12,12 @@ public class ShopAnimation : MonoBehaviour
     [SerializeField] private Mesh murasaki;
 
     // Start is called before the first frame update
-    void Start()
+    IEnumerator Start()
     {
+        yield return null;
         _system = GetComponent<ParticleSystem>();
         ParticleSystem.MainModule main = _system.main;
-        Color col = GameManager.Instance.getColor();
-
         _renderer = GetComponent<ParticleSystemRenderer>();
-        
         switch (GameManager.Instance.biome)
         {  
             case 0:
@@ -28,15 +26,15 @@ public class ShopAnimation : MonoBehaviour
                 break;
             case 1: 
                 _renderer.mesh = vert;
-                main.startColor = new ParticleSystem.MinMaxGradient(new Color(	30,162,0));
+                main.startColor = new ParticleSystem.MinMaxGradient(new Color(	0,162,0));
                 break;
             case 2:
                 _renderer.mesh = blue;
                 main.startColor = new ParticleSystem.MinMaxGradient(new Color(0,40,	162));
                 break;
             case 3:
+                main.startColor = new ParticleSystem.MinMaxGradient(new Color(90,0,	71));
                 _renderer.mesh = murasaki;
-                main.startColor = new ParticleSystem.MinMaxGradient(new Color(	154,22,126));
                 break;
         }
     }
