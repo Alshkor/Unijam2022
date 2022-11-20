@@ -36,7 +36,7 @@ public class ShopAnimation : MonoBehaviour
                 break;
             case 3:
                 _renderer.mesh = murasaki;
-                main.startColor = new ParticleSystem.MinMaxGradient(new Color(	151,0,119));
+                main.startColor = new ParticleSystem.MinMaxGradient(new Color(		90,0,71));
                 break;
         }
     }
