@@ -5559,6 +5559,7 @@ GameObject:
   - component: {fileID: 7940675439751438821}
   - component: {fileID: 3902591099086566416}
   - component: {fileID: 9042486582560278880}
+  - component: {fileID: 6533615333552136920}
   m_Layer: 0
   m_Name: SubEmitter0
   m_TagString: Untagged
@@ -10418,6 +10419,18 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &6533615333552136920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3870141467176269374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6790ece741a12b244a2c5c14845c4d3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6682908901566096141
 GameObject:
   m_ObjectHideFlags: 0
@@ -15961,6 +15974,10 @@ PrefabInstance:
       propertyPath: jumpForce.y
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 6858864745061410283, guid: 3e526f7e838171d40a24d56342b1a409, type: 3}
+      propertyPath: runParticle
+      value: 
+      objectReference: {fileID: 9184078305736385625}
     - target: {fileID: 7663234353639253180, guid: 3e526f7e838171d40a24d56342b1a409, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.2
