@@ -7,13 +7,15 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform groundCheckLeft;
     [SerializeField] private Transform groundCheckRight;
     [SerializeField] private Rigidbody2D character;
-
+    [SerializeField] private AudioSource audioSfx;
+    [SerializeField] private AudioClip jumpSound;
+    [SerializeField] private AudioSource runAudio;
     #endregion
 
     public float sprintSpeed = 0.5f;
     public bool canSprint = true;
     public float jumpSpeed;
-
+    
     public Vector2 jumpForce;
     [SerializeField] private Animator animator;
 
@@ -25,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 _addJumpForce;
     private bool _isGrounded;
     private bool _wasOnAir;
+    private bool _isSprinting;
 
     #endregion
 
@@ -63,8 +66,6 @@ public class PlayerMovement : MonoBehaviour
         if (_isGrounded && _wasOnAir)
         {
             _wasOnAir = false;
-
-
         }
 
         if (_jumpInput)
@@ -72,13 +73,14 @@ public class PlayerMovement : MonoBehaviour
             if (_isGrounded && _speed.y<1)
             {
                 _speed.y = jumpSpeed;
-                
+                audioSfx.clip = jumpSound;
+                audioSfx.Play();
+                animator.SetTrigger("Jump");
             }
             else
             {
                 _speed.y = character.velocity.y;
                 character.AddForce(jumpForce);
-                animator.SetTrigger("Jump");
             }
         }
         else
@@ -91,15 +93,24 @@ public class PlayerMovement : MonoBehaviour
         {
             _speed.x = sprintSpeed;
             GameManager.Instance.PlayerStamina -= Time.deltaTime;
+            if (!_isSprinting)
+            {
+                runAudio.Play();
+                _isSprinting = true;
+            }
         }
         else
         {
+            if (_isSprinting)
+            {
+                runAudio.Stop();
+                _isSprinting = false;
+            }
+            _isSprinting = false;
             _speed.x = 0;
         }
         animator.SetFloat("Speed", _speed.x + CameraMovement.SpeedCamera);
         character.velocity = _speed;
     }
-    
-    
 }
 
